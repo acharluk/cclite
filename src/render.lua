@@ -147,6 +147,11 @@ local function drawMessage(message,x,y)
 end
 
 function Screen:draw()
+
+	-- Center terminal
+   	love.graphics.translate(love.graphics.getWidth() / 2 - self.sWidth / 2,
+	   						love.graphics.getHeight() / 2 - self.sHeight / 2)
+
 	-- Render terminal
 	if not Computer.running then
 		setColor(COLOUR_FULL_BLACK)
@@ -223,4 +228,10 @@ function Screen:draw()
 		love.graphics.line(x + radiusOut, y - radiusOut, x + radiusIn, y - radiusIn)
 		love.graphics.line(x + radiusOut, y + radiusOut, x + radiusIn, y + radiusIn)
 	end
+
+
+	-- Center terminal
+   	love.graphics.translate(-(love.graphics.getWidth() / 2 - self.sWidth / 2),
+	   						-(love.graphics.getHeight() / 2 - self.sHeight / 2))
+
 end

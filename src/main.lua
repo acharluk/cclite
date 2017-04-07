@@ -15,7 +15,7 @@ local defaultConf = [[_conf = {
 	terminal_width = 51,
 	
 	-- The GUI scale of Computer screens
-	terminal_guiScale = 2,
+	terminal_guiScale = 5,
 	
 	-- Enable display of emulator FPS
 	cclite_showFPS = false,
