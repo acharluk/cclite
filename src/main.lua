@@ -30,7 +30,7 @@ local defaultConf = [[_conf = {
 	useCRLF = false,
 	
 	-- Check for updates
-	cclite_updateChecker = true,
+	cclite_updateChecker = false,
 	
 	-- Enable onscreen controls
 	mobileMode = false,
@@ -95,7 +95,7 @@ end
 
 love.window.setTitle("ComputerCraft Emulator")
 love.window.setIcon(love.image.newImageData("res/icon.png"))
-love.window.setMode((_conf.terminal_width * 6 * _conf.terminal_guiScale) + (_conf.terminal_guiScale * 2), (_conf.terminal_height * 9 * _conf.terminal_guiScale) + (_conf.terminal_guiScale * 2), {vsync = false})
+love.window.setMode((_conf.terminal_width * 6 * _conf.terminal_guiScale) + (_conf.terminal_guiScale * 2), (_conf.terminal_height * 9 * _conf.terminal_guiScale) + (_conf.terminal_guiScale * 2), { vsync = false, fullscreen = true })
 
 if _conf.enableAPI_http then require("http.HttpRequest") end
 bit = require("bit")
